@@ -17,7 +17,8 @@ public class RatingsDataResource {
 	@RequestMapping("/{movieId}")
 	public Rating getRating(@PathVariable("movieId") String movieId)
 	{
-		return new Rating(movieId, rating:4);
+	
+		return new Rating(movieId, 4);
 		
 	}
 
@@ -25,8 +26,8 @@ public class RatingsDataResource {
 	public UserRating getUserRating(@PathVariable("userId") String userId)
 	{
 		List<Rating> ratings= Arrays.asList(
-				new Rating(movieId:"1234", rating:4),
-				new Rating(movieId:"5678", rating:3));
+				new Rating("1234", 4),
+				new Rating("5678", 3));
 		
 
 		UserRating userRating= new UserRating();
